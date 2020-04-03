@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Build v0.1.0a</title>
+        <link rel="stylesheet" type="text/css" href="node_modules/semantic-ui/dist/semantic.min.css">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="ui container">
+            <div class="ui basic segment">
+                <h1>Welcome to My Design<i class="hand peace icon outline" style="color:rgb(31, 31, 31);"></i></h1>
+                <br/>
+                <br/>
+                <h2 class="ui left floated header">Render Queue
+                </h2>
+                <div class="ui clearing divider"></div>
+                <button id="action-btn" class="ui teal button" onclick="action()">Action</button>
+                <button id="click-me-btn" onclick="changeBtnText()" class="ui teal button">Click Me</button>
+                <button id="doc-btn" class="ui button" onclick="toggleDocumentation()">Documentation</button>
+                
+                <p></p>
+                <i id="star" class="huge yellow star icon" style="display:none"></i>
+                
+                <table class="ui celled padded table">
+                <thead>
+                    <tr><th class="single line">Location</th>
+                    <th>Serial No.</th>
+                    <th>Status</th>
+                    <th>Info</th>
+                    <th>Percent Used</th>
+                </tr></thead>
+                <tbody>
+                    <tr>
+                        <td class="single line">Box 1</td>
+                        <td class="single line">ABCDEFGH</td>
+                        <td><i class="check square green icon"></i>OK</td>
+                        <td class="single line">LM0567TKY987</td>
+                        <td class="single line">98%</td>
+                    </tr>
+                    <tr>
+                        <td class="single line">Box 2</td>
+                        <td class="single line">IJKLMNOP</td>
+                        <td><i class="warning sign yellow icon"></i>Warning</td>
+                        <td class="single line">LM0567TKY987</td>
+                        <td class="single line">50%</td>
+                    </tr>
+                    <tr>
+                        <td class="single line">Box 3</td>
+                        <td class="single line">QRSTUVW</td>
+                        <td><i class="check square green icon"></i>OK</td>
+                        <td class="single line">LM0567TKY987</td>
+                        <td class="single line">99%</td>
+                    </tr>
+                    <tr>
+                        <td class="single line">Box 4</td>
+                        <td class="single line">XYZPDQ</td>
+                        <td><i class="check square green icon"></i>OK</td>
+                        <td class="single line">LM0567TKY987</td>
+                        <td class="single line">98%</td>
+                    </tr>
+                    <tr>
+                        <td class="single line">Box 5</td>
+                        <td class="single line">HGFEDCBA</td>
+                        <td><i class="check square green icon"></i>OK</td>
+                        <td class="single line">LM0567TKY987</td>
+                        <td class="single line">97%</td>
+                    </tr>
+                </tbody>
+                </table>
+                
+                <div id="docs" class="ui piled segment" style="display:none">
+                    <h4 class="ui header">Welcome to Documenation</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at velit eu tellus rutrum accumsan tristique nec est. Sed eu dui varius, vestibulum dolor quis, elementum metus. Cras non mi sit amet metus tristique vestibulum. Donec dolor nisi, tincidunt nec posuere vel, scelerisque a eros. Proin elit purus, fermentum at vehicula in, volutpat ut purus. Maecenas eget elit in dolor porttitor dictum at in enim. Etiam tincidunt facilisis turpis, in mattis velit sagittis sit amet. Mauris nec erat sit amet odio luctus lobortis sit amet in nisi. Cras odio dui, tempus in tempus ullamcorper, dictum convallis sem. Duis vel dapibus libero, sit amet maximus metus. Sed posuere nunc id vestibulum pulvinar. Curabitur eu volutpat arcu. Proin in odio erat. In non viverra mauris. Suspendisse ac posuere ante.</p>
+
+                    <p>Donec vehicula nibh non mauris volutpat, non pellentesque sapien lacinia. Fusce quam dui, egestas id neque ac, vehicula porta sapien. Morbi sed ex at neque tristique convallis. Aliquam condimentum sapien quis justo dictum, ac interdum enim lobortis. Quisque consequat quam sit amet risus accumsan, ut fermentum leo elementum. Vestibulum eget lorem non quam iaculis lacinia non vitae ligula. Ut pellentesque rhoncus sapien quis viverra. Sed consequat porttitor leo eget feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam finibus a nisi a consectetur. Nam dapibus tincidunt lectus, hendrerit tempor purus vehicula quis.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "Electron-PersonalisedBuild",
+  "version": "1.0.0",
+  "description": "Personalised build of electron for my apps",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/Galileo-dev/Electron-PersonalisedBuild.git",
+  "author": "Galileo <Galileo-dev@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^8.2.0"
+  }
+}
