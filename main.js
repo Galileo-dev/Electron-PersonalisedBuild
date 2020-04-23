@@ -1,6 +1,7 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+const TitlebarWindows = require('electron-titlebar-windows');   
 
 const {app, BrowserWindow, Menu} = electron;
 
@@ -11,7 +12,16 @@ let addWindow;
 
 app.on('ready', function(){
     //Create new window
-    mainWindow = new BrowserWindow({ webPreferences: {nodeIntegration: true} });
+    mainWindow = new BrowserWindow({
+        width: 900,
+        height: 680,
+        minWidth: 400,
+        frame: false,
+        backgroundColor: '#FFF',
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
     //Load html file
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'mainwindow.html'),
@@ -36,6 +46,7 @@ function createAddWindow(){
     addWindow = new BrowserWindow({
         width: 400,
         height: 200,
+        frame:false,
         title:'Export Video',
         webPreferences: {nodeIntegration: true} 
     });

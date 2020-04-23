@@ -1,0 +1,175 @@
+* {margin: 0; padding: 0; border: 0; vertical-align: baseline;}
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+html, body {height: 100%; margin: 0;}
+
+@font-face {
+    font-family: Monda;
+    src: url('./Assets/font/Monda/Monda-Regular.ttf');
+}
+
+body {
+    
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #1A1A30 0%, #2D2344 100%);
+    opacity: 0.9;
+  color: #FFF;
+  overflow-y: hidden;
+}
+h1 {margin: 0 0 10px 0; font-weight: 600; line-height: 1.2;}
+p {margin-top: 10px; color: rgba(255,255,255,0.4);}
+
+  
+  #titlebar {
+    display: block;
+    position: fixed;
+    height: 32px;
+    width: 100%; /*Compensate for body 1px border*/
+    background: #272940;
+    padding: 4px;
+    color: #E5E5E5;
+  }
+
+  #window-title {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    overflow: hidden;
+    font-family: Monda;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+
+    font-size: 20px;
+  }
+  
+  #window-title span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  #window-title span img {
+        width: 1.2em;
+        height: 1.2em;
+        position: relative;
+        top: 3px;
+        margin-right: 0px;
+      
+
+  }
+  
+  #main {
+    height: calc(100% - 32px);
+    padding: 32px;
+    overflow-y: auto;
+    
+    background;
+  }
+
+  #titlebar #drag-region {
+    width: 100%;
+    height: 100%;
+    -webkit-app-region: drag;
+  }
+
+  
+  #window-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 46px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+  
+  #window-controls .button {
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  #min-button {
+    grid-column: 1;
+  }
+  #max-button, #restore-button {
+    grid-column: 2;
+  }
+  #close-button {
+    grid-column: 3;
+  }
+
+  @media (-webkit-device-pixel-ratio: 1.5), (device-pixel-ratio: 1.5),
+(-webkit-device-pixel-ratio: 2), (device-pixel-ratio: 2),
+(-webkit-device-pixel-ratio: 3), (device-pixel-ratio: 3) {
+  #window-controls .icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+#window-controls {
+    -webkit-app-region: no-drag;
+  }
+  
+  #window-controls .button {
+    user-select: none;
+  }
+  #window-controls .button:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  #window-controls .button:active {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  #close-button:hover {
+    background: #E81123 !important;
+  }
+  #close-button:active {
+    background: #F1707A !important;
+  }
+  #close-button:active .icon {
+    filter: invert(1);
+  }
+  
+  #restore-button {
+    display: none !important;
+  }
+
+  #titlebar #drag-region {
+    display: grid;
+    grid-template-columns: auto 138px;
+  }
+  
+  .maximized #titlebar {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .maximized #window-title {
+    margin-left: 12px;
+  }
+  
+  .maximized #restore-button {
+    display: flex !important;
+  }
+  
+  .maximized #max-button {
+    display: none;
+  }
+
+ 
+.lines {
+    position: absolute;
+    transform: rotate(60deg);
+    width: 150%; 
+    height: 150%;
+   
+  }
