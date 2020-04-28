@@ -1,5 +1,5 @@
 * {margin: 0; padding: 0; border: 0; vertical-align: baseline;}
-html {box-sizing: border-box;}
+html {box-sizing: border-box; background-color: black;}
 *, *:before, *:after {box-sizing: inherit;}
 html, body {height: 100%; margin: 0;}
 
@@ -9,18 +9,20 @@ html, body {height: 100%; margin: 0;}
 }
 
 body {
-    
+  
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(180deg, #1A1A30 0%, #2D2344 100%);
     opacity: 0.9;
   color: #FFF;
   overflow-y: hidden;
+  overflow-x: hidden; 
 }
 h1 {margin: 0 0 10px 0; font-weight: 600; line-height: 1.2;}
 p {margin-top: 10px; color: rgba(255,255,255,0.4);}
 
   
   #titlebar {
+    z-index: 10;
     display: block;
     position: fixed;
     height: 32px;
@@ -68,8 +70,6 @@ p {margin-top: 10px; color: rgba(255,255,255,0.4);}
     height: calc(100% - 32px);
     padding: 32px;
     overflow-y: auto;
-    
-    background;
   }
 
   #titlebar #drag-region {
@@ -171,5 +171,6 @@ p {margin-top: 10px; color: rgba(255,255,255,0.4);}
     transform: rotate(60deg);
     width: 150%; 
     height: 150%;
+    overflow: hidden;
    
   }
