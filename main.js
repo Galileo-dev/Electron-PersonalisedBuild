@@ -1,8 +1,6 @@
 const electron = require('electron');
 const url = require('url');
-const path = require('path');
-const TitlebarWindows = require('electron-titlebar-windows');   
-
+const path = require('path');  
 const {app, BrowserWindow, Menu} = electron;
 
 let mainWindow;
