@@ -10,7 +10,8 @@
   "author": "Galileo <Galileo-dev@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "electron": "^8.2.3",
-    "electron-titlebar-windows": "^3.0.0"
+    "electron": "^9.0.5",
+    "electron-titlebar-windows": "^3.0.0",
+    "yarn": "^1.22.4"
   }
 }
